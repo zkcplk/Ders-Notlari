@@ -1,0 +1,20 @@
+Bu satır bir palindrom değildir!
+Adana'da traş şart Adana'da.
+Bu ise hiçbir şekilde palindrom değil ki...
+Aç raporunu koy okunur o parça.
+Bu satır da kesinlikle palindrom olamaz!
+Adamla çene çalma da.
+Aslı sanmışım nasılsa.
+Ana, naci dede ne dedi canan'a?
+Ayşen ıslak kalsın eşya.
+a man, a plan, a canal, Panama!
+Her satır palindrom olursa, ne anlamı kalır ödevin?
+Kalas yok kütük koy salak.
+aRada BAZI Kelimeleri BÜYÜK KÜÇÜK HARF yaparak dA denemek LAZIM.
+Taco Cat!
+Sağlam TEST olması için, değişik karakterler deneyelim: &+^%()/=@<>
+Kasaya mal koyana yoklama yasak.
+Karalasak şairi aşka salarak.
+Keçin ileridedir elini çek.
+Kesti geveze, tez eve gitsek.                                                        
+Palindrom cenneti bir dilmiş bizimkisi de haberimiz yok :)
