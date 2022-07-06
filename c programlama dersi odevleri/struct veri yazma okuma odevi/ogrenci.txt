@@ -1,0 +1,5 @@
+100,Ýsmail Aydýn,48,90,
+101,Ayþe Irmak,66,70,
+102,Kerem Yaman,50,80,
+103,Burcu Çiçek,70,75,
+105,Elif Bilge,80,100,
