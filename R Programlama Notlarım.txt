@@ -1,0 +1,187 @@
+# vektör oluşturmak ve belirli bir elemana ulaşmak
+x <- c(1,2,3,4,5)
+x[3]
+
+# belli bir sınırlamaya göre vektör elemanlarına ulaşmak
+x[x<3] 
+
+# vektörün eleman sayısını bulmak
+length(x)
+
+# belli bir düzene sahip vektör oluşturmak
+y <- seq(1,20) # 1den 20ye kadar giden sayılar...
+y
+
+yy <- seq(2,20,2) # bu sefer 2den ikişer ikişer 20ye kadar...
+yy
+
+# farklı bir yöntemle vektör oluşturmak
+z1 <- 1:5
+z1
+
+z2 <- seq(1,5)
+z2
+
+# tekrarlanan bir yapıda vektör oluşturmak
+a <- rep(0:9,2)
+a
+
+# veya üstteki 0:9 yerine seq(0,9) yazarak
+b <- rep(seq(0,9),2)
+b
+
+# iki kolonlu matris oluşturmak
+# veriler sütun (kolon) olarak giriliyor
+matris1 <- matrix(c(6,5,4,3,2,1,1,2,3,4,5,6), ncol=2)
+matris1
+
+# iki kolonlu matris oluşturmak
+# veriler satır olarak giriliyor.
+matris2 <- matrix(c(6,5,4,3,2,1,1,2,3,4,5,6), ncol=2, byrow=T)
+matris2
+
+# matris içindeki bir elemana ulaşmak
+r1c1 <- matris2[1,1]
+r1c1
+
+r2c1 <- matris2[2,1]
+r2c1
+
+# bir matrisin tüm satırına veya sütununa ulaşmak
+v <- c(11,22,33,44,55,66,77,88,99)
+m <- matrix(v, ncol=3, byrow=F)
+m
+
+# birinci satırın tamamı
+m[1,]
+
+# üçüncü sütunun tamamı
+m[,3]
+
+# matrislerin toplanması
+m1 <- matrix(c(10,20,30,40), ncol=2, byrow=T)
+m1
+m2 <- matrix(c(15,25,35,45), ncol=2, byrow=T)
+m2
+
+toplam <- m1 + m2
+toplam
+
+# matris farkı
+fark <- m2 - m1
+fark
+
+# çarpma işlemi 1 (elemanlar çarpımı)
+carpim1 = m1 * 2
+carpim1
+
+carpim2 = m1 * matrix(c(2,1,2,1), ncol=2, byrow=T)
+carpim2
+
+# çarpma işlemi 2 (matrislerin çarpımı)
+m3 = matrix(c(1,2,2,1), ncol=2, byrow=T)
+m3
+m4 <- matrix(c(1,1,1,1), ncol=2, byrow=T)
+m4
+
+elemanCarpim <- m3 * m4
+elemanCarpim
+
+matrisCarpim = m3 %*% m4
+matrisCarpim
+
+# matrisin devriğini almak (transpoz)
+mtrs = matrix(c(1,1,1,2,2,2), ncol=3, byrow=T)
+mtrs
+ 
+devrik = t(mtrs)
+devrik
+
+# mantıksal işlemler
+degisken = 3<5
+degisken
+
+degisken = 3>5
+degisken
+
+degisken = 3<=5
+degisken
+
+degisken = 3!=5
+degisken
+
+degisken = 3==5
+degisken
+
+degisken = 3<5 & 4<5
+degisken
+
+degisken = 3<5 | 0>9999
+degisken
+
+degisken = !3<5
+degisken
+
+# mantıksal işlem fonksiyonları
+is.character("Kuzey") 	#  TRUE
+is.numeric(27)			#  TRUE
+is.infinite(25/0)       #  TRUE
+
+# sıralama fonksiyonu sort()
+sirasiz <- c(23,12,43,37,11)
+sirali <- sort(sirasiz)
+sirali
+
+# farklı nesnelerin list ile bir araya getirilmesi
+m1 = matrix(c(1,2,3), ncol=1, byrow=T)
+m1
+
+m2 = matrix(c(11,22,33), ncol=1, byrow=T) 
+m2 
+
+birlikte<-list(m1,m2) 
+birlikte
+
+# list içerisinden bir m2 matrisine ulaşmak
+birlikte[[2]]
+
+# list içerisine eklenen matrislere isim vermek
+birlikte<-list(ilk=m1,son=m2) 
+birlikte
+
+# list içerisinde isim verilen matrislere $ işareti ile ulaşmak
+birlikte$ilk
+
+# dataframe oluşturmak (her sütunda eşit birim olmalı)
+bilgisayar <- c(45,25,12,21,42,32,14,54) 
+matematik <- c(34,65,76,12,37,83,90,48) 
+isimler <- c("Tuğba", "Selin", "Volkan", "Ahmet", "Ümit", "Önder", "Zeynep", "Sema") 
+notlar <- data.frame(isimler, bilgisayar, matematik) 
+notlar
+
+# dataframe nesnesindeki bir sütuna $ işareti ile ulaşmak
+notlar$matematik
+
+# dataframe içindeki bir sütun için tanımlayıcı istatistikler
+summary(notlar$matematik)
+
+# fonksiyon oluşturmak
+matris_yap <- function(row, col, n) {
+  print(matrix(rep(c(n),row*col), ncol=col, byrow=T))
+}
+
+# tüm elemanları 1 olan 3x3'lük bir matris oluşturan fonksiyon
+matris_yap(3,3,1)
+
+# ortalama hesaplamak
+d <- c(1,2,3,4,2,2,3,3,4,4,5)
+mean(d)
+
+# standart sapma hesaplamak
+var(d)
+
+# histogram grafiği çizmek
+hist(d)
+
+# kutu grafiği çizmek
+boxplot(d)
